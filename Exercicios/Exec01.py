@@ -33,7 +33,7 @@ def calcular_gorjeta_por_pessoa(conta:float, porcentagem_gorjeta:float, pessoas:
 
     return gorjeta
 
-print(f"Cada pessoa deve cotribuir com XX para gorjeta\n")
+print(f"Cada pessoa deve cotribuir com {gorjeta} para gorjeta\n")
 
 #---------------------------------------------------------------
 
