@@ -37,5 +37,15 @@ print(f"Cada pessoa deve cotribuir com {gorjeta} para gorjeta\n")
 
 #---------------------------------------------------------------
 
+#---------------------------------------------------------------
+
+def dobrar(lista:int):
+
+    return gorjeta
+
+print(f"Cada pessoa deve cotribuir com {gorjeta} para gorjeta\n")
+
+#---------------------------------------------------------------
+
 
 print("###########################################################")

@@ -122,15 +122,70 @@ print("\n#Fim--------------------------------------------\n")
 #Exec06-----------------------------------------------------------
 
 print("\n# 6. Sistema de Desconto de Loja----------------\n")
-def calcular_desconto(valor_compra:float, e_cliente_vip:float):
- 
-    if(n1>n2):
-      return print("O primeiro é maior")
+def calcular_desconto(valor_compra:float, e_cliente_vip:bool): 
+
+    if(e_cliente_vip or valor_compra>200):
+      desconto = 15      
+      vlrFinal = valor_compra - (valor_compra * (desconto/100))
+
+      return print(f"Você recebeu {desconto}% de desconto! Valor final da sua compra é R$ {vlrFinal:.2f}X".replace(",", "X").replace(".", ",").replace("X", "."))
+    
+      
+    else:
+      desconto = 5      
+      vlrFinal = valor_compra - (valor_compra * (desconto/100))
+      return print(f"Você recebeu {desconto}% de desconto! Valor final da sua compra é R$ {vlrFinal:.2f}X".replace(",", "X").replace(".", ",").replace("X", "."))
+
+calcular_desconto(150, False)
+
+print("\n#Fim--------------------------------------------\n")
+
+#---------------------------------------------------------------
+
+#Exec07-----------------------------------------------------------
+
+print("\n# 7. Classificação Acadêmica--------------------\n")
+def conceito_nota(nota:float): 
+
+    if(nota>=9 and nota<=10):
+
+      return print("Você atingiu o conceito A")
+    
+    elif(nota>=7 and nota<=8.9):
+
+      return print("Você atingiu o conceito B")
+    
+    elif(nota>=5 and nota<=6.9):
+
+      return print("Você atingiu o conceito C")
+          
+    else:
+       return print("Você atingiu o conceito F")
+      
+conceito_nota(9.2)
+
+print("\n#Fim--------------------------------------------\n")
+
+#---------------------------------------------------------------
+
+#Exec08-----------------------------------------------------------
+
+print("\n# 8. Validador de Triângulos--------------------\n")
+def tipo_triangulo(a, b, c): 
+
+    if(a + b > c):
+      return print("Equilátero")
+    
+    elif(a + c > b):
+      return print("Isósceles")
+    
+    elif(b + c > a ):
+      return print("Escaleno")
     
     else:
-      return print("São iguais")
-
-Resultado = calcular_desconto(7,8)
+       return print("Não é um triângulo")
+      
+tipo_triangulo(1,2,10)
 
 print("\n#Fim--------------------------------------------\n")
 
