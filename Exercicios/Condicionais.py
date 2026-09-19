@@ -1,3 +1,6 @@
+
+'''
+
 #Exec00-----------------------------------------------------------
 
 print("\n#Exec01------------------------------------------\n")
@@ -173,14 +176,8 @@ print("\n#Fim--------------------------------------------\n")
 print("\n# 8. Validador de Triângulos--------------------\n")
 def tipo_triangulo(a, b, c): 
 
-    if(a + b > c):
-      return print("Equilátero")
-    
-    elif(a + c > b):
-      return print("Isósceles")
-    
-    elif(b + c > a ):
-      return print("Escaleno")
+    if(a + b > c and a + c > b and b + c > a):
+      return print("Equilátero, Isósceles ou Escaleno")
     
     else:
        return print("Não é um triângulo")
@@ -188,5 +185,45 @@ def tipo_triangulo(a, b, c):
 tipo_triangulo(1,2,10)
 
 print("\n#Fim--------------------------------------------\n")
+
+#---------------------------------------------------------------
+
+#Exec09-----------------------------------------------------------
+
+print("\n# 9. Calculadora de Imposto de Renda Progressivo----\n")
+def calcular_imposto(salario:float): 
+
+    if(salario<=2000):
+      return 0.0
+    
+    elif(salario<=4000):
+       salario_final = salario-2000
+       return salario_final*0.1
+    
+    else:
+       salario_final = salario-4000
+       return 200+(salario_final*0.2)
+      
+imposto = calcular_imposto(5000)
+print(imposto)
+
+print("\n#Fim-------------------------------------------------\n")
+
+#---------------------------------------------------------------
+'''
+#Exec10-----------------------------------------------------------
+
+print("\n# 10. Validador de Ano Bissexto---------------------\n")
+def e_bissexto(ano:int): 
+
+    if((ano%4==0 and ano%100!=0) or (ano%400==0) ):
+          return True
+    else:
+       return False
+      
+anoBi = e_bissexto(2016)
+print(anoBi)
+
+print("\n#Fim-------------------------------------------------\n")
 
 #---------------------------------------------------------------
