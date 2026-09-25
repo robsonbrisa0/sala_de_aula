@@ -59,23 +59,29 @@ print("\n#Fim-------------------------------------------------------------\n")
 
 print("\n# 3. Simulador de Tarifação Telefônica em Rolo -------------------\n")
 def calcular_fatura_telefone(minutos, gigas, e_estudante):
-     if(x == 0 and y == 0):
-          return "Origem"
-     elif(x == 0 and y != 0):
-          return "Eixo Y"
-     elif(x > 0 and y > 0):
-          return "Q1"
-     elif(x < 0 and y < 0):
-          return "Q3"
-     elif(x != 0 and y == 0):
-          return "Eixo X"
-     elif(x < 0 and y > 0):
-          return "Q2"
-     else:
-          return "Q4"
-     
-resultado = calcular_fatura_telefone(-3,-4)
+    
+    plano_base = 50
+    min_excedente = (minutos-100) * 0.5    
+    giga_excedente = (gigas - 5) * 10
+    fatura_total = plano_base + min_excedente + giga_excedente
+
+    if(e_estudante == True and fatura_total):
+       print (min_excedente)
+       print (giga_excedente)
+       print (fatura_total)
+       return "Fatura Final: R$ 60.00"
+    
+    else:
+       print (min_excedente)
+       print (giga_excedente)
+       print (fatura_total)
+       return "Fatura Final: R$ 50.00"
+    
+
+
+resultado = calcular_fatura_telefone(80, 4, False)
 print(resultado)
+
      
 print("\n#Fim-------------------------------------------------------------\n")
 
